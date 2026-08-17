@@ -1,4 +1,4 @@
-# Invoice Management System
+# Invoice Management System 
 
 A full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) for managing clients and invoices. It provides a user-friendly interface to create, edit, view, and print professional invoices.
 
