@@ -15,7 +15,6 @@ const invoiceSchema = new mongoose.Schema(
     {
         invoiceNumber: {type: String, required:true, unique:true},
         client: {type: mongoose.Schema.Types.ObjectId, ref: "Client", required:true},
-        companyName: {type: String, default: "Your Company Name"},
         companyLogo: {type: String, default: ""},
         companyAddress: {type: String, default: "Your Address, City"},
         companyPhone: {type: String, default: "+000 000 000 000"},
