@@ -10,7 +10,6 @@ export default function InvoiceForm() {
     invoiceNumber: "",
     client: "",
     dueDate: "",
-    companyName: "Your Company Name",
     companyLogo: "",
     companyAddress: "Your Address, City",
     companyPhone: "+000 000 000 000",
@@ -113,17 +112,7 @@ export default function InvoiceForm() {
           <div className="card-header bg-light"><strong>Company Details</strong></div>
           <div className="card-body">
             <div className="row g-2">
-              <div className="col-md-6">
-                <label className="form-label text-muted small mb-1">Company Name</label>
-                <input
-                  className="form-control"
-                  placeholder="Company Name"
-                  required
-                  value={form.companyName}
-                  onChange={(e) => setForm({ ...form, companyName: e.target.value })}
-                />
-              </div>
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <label className="form-label text-muted small mb-1">Company Logo</label>
                 <div className="d-flex align-items-center gap-2">
                   <input

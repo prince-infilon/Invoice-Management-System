@@ -27,7 +27,6 @@ export default function InvoiceDetail() {
   );
 
   const company = {
-    name: invoice.companyName || "Your Company Name",
     address: invoice.companyAddress || "Your Address, City",
     phone: invoice.companyPhone || "+000 000 000 000",
     email: invoice.companyEmail || "sales@yourcompany.com",
@@ -77,29 +76,13 @@ export default function InvoiceDetail() {
         {/* Header */}
         <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            {invoice.companyLogo ? (
+            {invoice.companyLogo && (
               <img 
                 src={invoice.companyLogo} 
                 alt="Company Logo" 
                 style={{ width: '80px', height: '80px', objectFit: 'contain' }} 
               />
-            ) : (
-              <div style={{ 
-                width: '80px', height: '80px', borderRadius: '50%', 
-                border: '4px solid #1a3673', display: 'flex', 
-                alignItems: 'center', justifyContent: 'center', 
-                position: 'relative', overflow: 'hidden' 
-              }}>
-                <div style={{ position: 'absolute', width: '120%', height: '120%', border: '2px solid #1a3673', borderRadius: '40%', transform: 'rotate(30deg)' }}></div>
-                <div style={{ position: 'absolute', width: '120%', height: '120%', border: '2px solid #1a3673', borderRadius: '40%', transform: 'rotate(60deg)' }}></div>
-                <strong style={{ fontSize: '30px', color: '#1a3673', zIndex: 1, fontWeight: '900' }}>
-                  {company.name.charAt(0).toUpperCase()}
-                </strong>
-              </div>
             )}
-            <h1 style={{ fontSize: '32px', fontWeight: '900', color: '#1a3673', margin: 0 }}>
-              {company.name}
-            </h1>
           </div>
 
           <div style={{ borderLeft: '2px solid #ccc', paddingLeft: '20px', fontSize: '12px', lineHeight: '1.6' }}>
